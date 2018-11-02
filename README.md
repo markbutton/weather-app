@@ -1,6 +1,25 @@
-# WeatherApp
+# Weather SApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
+
+## App features
+
+1. Display 5 day weather forecast 
+3. Search by city
+4. Open weather api integration 
+5. Responsive design
+
+## Quick Start 
+1. Install [Node.js®](https://nodejs.org/en/download) and npm
+    node -v 
+    npm -v
+    
+2. Clone Repo
+    git clone https://github.com/markbutton/weather-app.git
+    
+3. Install node packages 
+    cd /go/to/app/directory having package.json
+    npm install
 
 ## Development server
 

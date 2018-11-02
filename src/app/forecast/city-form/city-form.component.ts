@@ -10,6 +10,7 @@ import * as state from '../../state';
 })
 export class CityFormComponent implements OnInit {
   @Input() city: City;
+  value: string;
 
   constructor(private forecastState: state.ForecastState) { }
 
