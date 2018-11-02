@@ -1,2 +1,7 @@
 <app-city-form></app-city-form>
-<app-forecast-list></app-forecast-list>
+
+<app-forecast-list [items]="(forecast | async)?.list | slice:0:8"></app-forecast-list>
+<app-forecast-list [items]="(forecast | async)?.list | slice:8:16"></app-forecast-list>
+<app-forecast-list [items]="(forecast | async)?.list | slice:16:24"></app-forecast-list>
+<app-forecast-list [items]="(forecast | async)?.list | slice:24:32"></app-forecast-list>
+<app-forecast-list [items]="(forecast | async)?.list | slice:32:40"></app-forecast-list>

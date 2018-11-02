@@ -15,6 +15,7 @@ export class ForecastState {
 
   constructor(private forecast5Service: Forecast5Service,
     @Inject('SESSIONSTORAGE') private sessionStorage: any) {
+    this.loadInitialData();
     this.setComplete(false);
   }
 
@@ -26,6 +27,7 @@ export class ForecastState {
     } else {
       this.getForecastService('denver,us');
     }
+    console.log(this._forecast.getValue());
   }
 
   setComplete(complete: boolean): void {

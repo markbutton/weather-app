@@ -8,6 +8,7 @@ import { ForecastModule } from './forecast/forecast.module';
 
 import * as state from './state';
 import { Forecast5Service } from './forecast/services/forecast5.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { Forecast5Service } from './forecast/services/forecast5.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     UiModule,
     ForecastModule
   ],
