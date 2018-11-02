@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { City } from '../models/city';
+
+import * as state from '../../state';
 
 @Component({
   selector: 'app-city-form',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./city-form.component.scss']
 })
 export class CityFormComponent implements OnInit {
+  @Input() city: City;
 
-  constructor() { }
+  constructor(private forecastState: state.ForecastState) { }
 
   ngOnInit() {
+  }
+
+  buttonClick(value: string) {
+    console.log('button clicked: ' + value);
+    this.forecastState.getForecastService(value + ',us');
   }
 
 }

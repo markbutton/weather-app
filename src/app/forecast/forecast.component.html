@@ -1,4 +1,8 @@
-<app-city-form></app-city-form>
+<h2>
+    <app-city-text [city]="(forecast | async)?.city"></app-city-text> 5 Day Weather Forecast
+</h2>
+
+<app-city-form [city]="(forecast | async)?.city"></app-city-form>
 
 <app-forecast-list [items]="(forecast | async)?.list | slice:0:8"></app-forecast-list>
 <app-forecast-list [items]="(forecast | async)?.list | slice:8:16"></app-forecast-list>

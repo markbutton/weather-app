@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Forecast } from '../models/forecast';
 import { List } from '../models/list';
 
 @Component({
@@ -15,7 +14,6 @@ export class ForecastListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.items);
   }
 
 }

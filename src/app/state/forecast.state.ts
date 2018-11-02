@@ -27,7 +27,6 @@ export class ForecastState {
     } else {
       this.getForecastService('denver,us');
     }
-    console.log(this._forecast.getValue());
   }
 
   setComplete(complete: boolean): void {

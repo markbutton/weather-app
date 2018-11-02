@@ -1,3 +1,7 @@
-<p>
-  forecast-list works!
-</p>
+<div>{{items[0].dt_txt | date:'mediumDate'}}</div>
+
+<div class="row">
+  <div class="col" *ngFor="let item of items">
+    <app-forecast-item [item]="item"></app-forecast-item>
+  </div>
+</div>

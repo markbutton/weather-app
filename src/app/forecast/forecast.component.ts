@@ -20,7 +20,6 @@ export class ForecastComponent implements OnInit {
   ngOnInit() {
     this.complete = this.forecastState.complete;
     this.forecast = this.forecastState.forecast;
-    console.log(this.forecast);
   }
 
 }
