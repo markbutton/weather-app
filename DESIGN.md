@@ -37,7 +37,7 @@ A: Yes.
 A: mock data class.  Need more research on mock data frameworks.  What level of unit test should I have?
 
 ### Q: Deployment considerations?
-A: Will there be automation?  How easy is it to build?
+A: FREE for now.  Will there be automation?  How easy is it to build?
 
 ### Q: Will I need end to end test?
 A: Set up basic e2e framework with a simple test.  What end to end test should I run?S

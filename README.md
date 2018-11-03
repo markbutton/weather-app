@@ -45,6 +45,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 Read some [Design Questions And Answers](./DESIGN.md) about my thinking when building this application.
 
+## Running example
+
+The [Weather App](https://weather.fatfractal.com/weatherapp/) is hosted on [FATFRACTAL](http://http://fatfractal.com/).
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
