@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { List } from '../models/list';
+import { Forecast5Data } from '../services/forecast5.data';
 
 @Component({
   selector: 'app-forecast-list',
@@ -14,6 +15,9 @@ export class ForecastListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if (!this.items) {
+      this.items = Forecast5Data.list;
+    }
   }
 
 }
