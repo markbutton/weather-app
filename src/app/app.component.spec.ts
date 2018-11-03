@@ -5,12 +5,13 @@ import { ForecastModule } from './forecast/forecast.module';
 import { UiModule } from './ui/ui.module';
 import { ForecastState } from './state';
 import { HttpClient, HttpHandler } from '@angular/common/http';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule, ForecastModule, UiModule
+        RouterTestingModule, ForecastModule, UiModule, NoopAnimationsModule
       ],
       declarations: [
         AppComponent

@@ -6,17 +6,10 @@ import { CityFormComponent } from './city-form/city-form.component';
 import { ForecastListComponent } from './forecast-list/forecast-list.component';
 import { ForecastItemComponent } from './forecast-item/forecast-item.component';
 import { FormsModule } from '@angular/forms';
-import { MatIconModule, MatFormFieldModule, MatCardModule } from '@angular/material';
+import { MatIconModule, MatFormFieldModule, MatCardModule, MatInputModule } from '@angular/material';
 import { ForecastState } from '../state';
 import { HttpClient, HttpHandler } from '@angular/common/http';
-
-class Forecast {
-  authenticated = false;
-
-  isAuthenticated() {
-    return this.authenticated;
-  }
-}
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ForecastComponent', () => {
   let component: ForecastComponent;
@@ -24,8 +17,14 @@ describe('ForecastComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ForecastComponent, CityTextComponent, CityFormComponent, ForecastListComponent, ForecastItemComponent ],
-      imports: [ FormsModule, MatIconModule, MatFormFieldModule, MatCardModule ],
+      declarations: [
+        ForecastComponent,
+        CityTextComponent,
+        CityFormComponent,
+        ForecastListComponent,
+        ForecastItemComponent,
+      ],
+      imports: [ FormsModule, MatIconModule, MatFormFieldModule, MatCardModule, MatInputModule, NoopAnimationsModule ],
       providers: [ ForecastState, HttpClient, HttpHandler, { provide: 'SESSIONSTORAGE', useFactory: getSessionStorage } ],
     })
     .compileComponents();

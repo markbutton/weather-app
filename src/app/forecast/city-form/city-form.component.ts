@@ -18,7 +18,6 @@ export class CityFormComponent implements OnInit {
   }
 
   buttonClick(value: string) {
-    console.log('button clicked: ' + value);
     this.forecastState.getForecastService(value + ',us');
   }
 

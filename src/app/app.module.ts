@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -12,7 +12,6 @@ import { ForecastModule } from './forecast/forecast.module';
 import * as state from './state';
 import { Forecast5Service } from './forecast/services/forecast5.service';
 
-
 @NgModule({
   declarations: [
     AppComponent
@@ -20,11 +19,12 @@ import { Forecast5Service } from './forecast/services/forecast5.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    NoopAnimationsModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule,
     UiModule,
-    ForecastModule
+    ForecastModule,
+    HttpClientModule,
   ],
   providers: [
     Forecast5Service,

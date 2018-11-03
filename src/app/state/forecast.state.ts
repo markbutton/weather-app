@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { Forecast } from '../forecast/models/forecast';
 import { Forecast5Service } from '../forecast/services/forecast5.service';
+import { Forecast5Data } from '../forecast/services/forecast5.data';
 
 @Injectable()
 export class ForecastState {
@@ -40,13 +41,21 @@ export class ForecastState {
         this._forecast.next(response);
         this.sessionStorage.setItem('forecast', JSON.stringify(response));
       },
-      err => console.error('Error retrieving Weather Forecast')
+      err => {
+        console.error('Error retrieving Weather Forecast', err);
+        const forecast = Forecast5Data;
+        this._forecast.next(forecast);
+      }
     );
   }
 
   getForecastSession(): void {
     const forecast = sessionStorage.getItem('forecast');
     this._forecast.next(JSON.parse(forecast));
+  }
+
+  setForecastState(forecast: Forecast): void {
+    this._forecast.next(forecast);
   }
 
 }

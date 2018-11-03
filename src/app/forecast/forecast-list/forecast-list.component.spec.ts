@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ForecastListComponent } from './forecast-list.component';
 import { ForecastItemComponent } from '../forecast-item/forecast-item.component';
 import { MatCardModule } from '@angular/material';
+import { Forecast5Data } from '../services/forecast5.data';
 
 describe('ForecastListComponent', () => {
   let component: ForecastListComponent;
@@ -19,6 +20,7 @@ describe('ForecastListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ForecastListComponent);
     component = fixture.componentInstance;
+    component.items = Forecast5Data.list;
     fixture.detectChanges();
   });
 
