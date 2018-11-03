@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule, MatGridListModule, MatButtonModule, MatInputModule, MatIconModule, MatFormFieldModule } from '@angular/material';
 
@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     MatInputModule
   ],
   declarations: [ForecastComponent, ForecastListComponent, ForecastItemComponent, CityFormComponent, CityTextComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [ForecastComponent]
 })
 export class ForecastModule { }

@@ -8,7 +8,7 @@ import { City } from '../models/city';
 })
 export class CityTextComponent implements OnInit {
   @Input() city: City;
-  
+
   constructor() { }
 
   ngOnInit() {

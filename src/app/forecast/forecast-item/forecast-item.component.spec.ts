@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ForecastItemComponent } from './forecast-item.component';
+import { MatCardModule } from '@angular/material';
 
 describe('ForecastItemComponent', () => {
   let component: ForecastItemComponent;
@@ -8,7 +9,8 @@ describe('ForecastItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ForecastItemComponent ]
+      declarations: [ ForecastItemComponent ],
+      imports: [ MatCardModule ],
     })
     .compileComponents();
   }));

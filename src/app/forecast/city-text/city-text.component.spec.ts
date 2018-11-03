@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CityTextComponent } from './city-text.component';
+import { ForecastState } from 'src/app/state';
 
 describe('CityTextComponent', () => {
   let component: CityTextComponent;
@@ -8,7 +9,10 @@ describe('CityTextComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CityTextComponent ]
+      declarations: [ CityTextComponent ],
+      providers: [
+        ForecastState
+      ],
     })
     .compileComponents();
   }));
