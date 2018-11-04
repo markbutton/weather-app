@@ -8,6 +8,7 @@ import { ForecastItemComponent } from './forecast-item/forecast-item.component';
 import { CityFormComponent } from './city-form/city-form.component';
 import { CityTextComponent } from './city-text/city-text.component';
 import { FormsModule } from '@angular/forms';
+import { ReplaceSpacePipe } from './pipes/replace-space.pipe';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatInputModule
   ],
-  declarations: [ForecastComponent, ForecastListComponent, ForecastItemComponent, CityFormComponent, CityTextComponent],
+  declarations: [ForecastComponent, ForecastListComponent, ForecastItemComponent, CityFormComponent, CityTextComponent, ReplaceSpacePipe],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [ForecastComponent]
 })

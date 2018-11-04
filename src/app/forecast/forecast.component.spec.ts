@@ -10,6 +10,7 @@ import { MatIconModule, MatFormFieldModule, MatCardModule, MatInputModule } from
 import { ForecastState } from '../state';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ReplaceSpacePipe } from './pipes/replace-space.pipe';
 
 describe('ForecastComponent', () => {
   let component: ForecastComponent;
@@ -23,6 +24,7 @@ describe('ForecastComponent', () => {
         CityFormComponent,
         ForecastListComponent,
         ForecastItemComponent,
+        ReplaceSpacePipe
       ],
       imports: [ FormsModule, MatIconModule, MatFormFieldModule, MatCardModule, MatInputModule, NoopAnimationsModule ],
       providers: [ ForecastState, HttpClient, HttpHandler, { provide: 'SESSIONSTORAGE', useFactory: getSessionStorage } ],

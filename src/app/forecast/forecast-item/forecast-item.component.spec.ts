@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ForecastItemComponent } from './forecast-item.component';
 import { MatCardModule } from '@angular/material';
 import { Forecast5Data } from '../services/forecast5.data';
+import { ReplaceSpacePipe } from '../pipes/replace-space.pipe';
 
 describe('ForecastItemComponent', () => {
   let component: ForecastItemComponent;
@@ -10,7 +11,7 @@ describe('ForecastItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ForecastItemComponent ],
+      declarations: [ ForecastItemComponent, ReplaceSpacePipe ],
       imports: [ MatCardModule ],
     })
     .compileComponents();
