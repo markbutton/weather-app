@@ -1,23 +1,40 @@
-<nav class="navbar navbar-dark bg-dark mb-5 fixed-top">
-  <a class="navbar-brand" href="/">Angular Weather</a>
-  <div class="navbar-expand mr-auto">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home</a>
-      <a class="nav-item nav-link" href="#">About</a>
-      <a class="nav-item nav-link" href="#">Contact</a>
+<div class="headercontainer">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">Angular Weather</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse show" id="navbarSupportedContent" [ngClass]="{ 'show': navbarOpen }">
+
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+
+      <div class="navbar-expand ml-auto navbar-nav">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="https://github.com/markbutton" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+          <a class="nav-item nav-link" href="https://twitter.com/MarkJButton" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a class="nav-item nav-link" href="https://www.linkedin.com/in/mark-button-5bbb9823/" target="_blank">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="navbar-expand ml-auto navbar-nav">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="https://github.com/markbutton" target="_blank">
-        <i class="fa fa-github"></i>
-      </a>
-      <a class="nav-item nav-link" href="https://twitter.com/MarkJButton" target="_blank">
-        <i class="fa fa-twitter"></i>
-      </a>
-      <a class="nav-item nav-link" href="https://www.linkedin.com/in/mark-button-5bbb9823/" target="_blank">
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </div>
-  </div>
-</nav>
+
+  </nav>
+</div>
