@@ -47,7 +47,7 @@ Read some [Design Questions And Answers](./DESIGN.md) about my thinking when bui
 
 ## Running example
 
-The [Weather App](https://weather.fatfractal.com/weatherapp/) is hosted on [FATFRACTAL](http://http://fatfractal.com/).
+The [Weather App](https://button.fatfractal.com/weather) is hosted on [FATFRACTAL](http://http://fatfractal.com/).
 
 ## Further help
 
